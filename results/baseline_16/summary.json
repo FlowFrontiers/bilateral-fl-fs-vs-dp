@@ -1,0 +1,28 @@
+{
+  "decision": "MARGINAL",
+  "n_seeds": 5,
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1024
+  ],
+  "threshold_needed": 4,
+  "condition_1_worst_group": true,
+  "fs_beats_dpsgd_worst": 5,
+  "macro_f1_ci_vs_dpsgd": {
+    "mean_diff": 0.022956736036889545,
+    "ci_low": -0.0032597565203227666,
+    "ci_high": 0.04917322859410186
+  },
+  "condition_2_macro_ci": false,
+  "feddpa_included": true,
+  "fs_beats_feddpa_worst": 5,
+  "feddpa_seeds_used": 5,
+  "macro_f1_ci_vs_feddpa": {
+    "mean_diff": 0.5482355996212145,
+    "ci_low": 0.47471111838297686,
+    "ci_high": 0.6217600808594521
+  }
+}

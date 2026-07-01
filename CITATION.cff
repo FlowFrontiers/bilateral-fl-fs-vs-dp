@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: "Bilateral FL: Feature Suppression vs Differential Privacy"
+type: software
+authors:
+  - name: "FlowFrontiers"
+repository-code: "https://github.com/FlowFrontiers/bilateral-fl-fs-vs-dp"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Privacy-Aware Traffic Analytics for Residential Service Management: A Two-Home Federated Study"
+  authors:
+    - name: "FlowFrontiers"
+  collection-title: "Under review"
+  year: 2026
+  status: submitted

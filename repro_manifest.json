@@ -1,0 +1,52 @@
+{
+  "description": "Reproducibility manifest for bilateral FL feature suppression vs differential privacy experiments.",
+  "python_version": "3.11.14",
+  "seeds": [42, 123, 456, 789, 1024],
+  "configurations": {
+    "size_proportional": ["baseline_fl", "fs_mild", "fs_aggressive", "dp_sgd", "feddpa"],
+    "equal_weight_ablation": ["baseline_fl", "fs_mild", "dp_sgd"]
+  },
+  "estimated_runtime_hours": 25,
+  "data_files": {
+    "data/home_A.parquet": {
+      "sha256": "e34b01a1ac786e8decda51336c81d8163ace4cf5fbe01deea5612b727f510bcb",
+      "bytes": 110614884,
+      "description": "Home A IP-deidentified flow records (11.9 days, 1,245,549 flows; src_ip/dst_ip removed)"
+    },
+    "data/home_B.parquet": {
+      "sha256": "b46b21c1d6b7b34ffd2028bff174f130940e09e35dd1c84ede8cdc4574698a43",
+      "bytes": 63172693,
+      "description": "Home B IP-deidentified extended flow records (11.5 days, 682,561 flows; src_ip/dst_ip removed)"
+    }
+  },
+  "expected_outputs": {
+    "results/audit_log.json": "Preprocessing audit (flow counts at each filter stage)",
+    "results/baseline_16/summary.json": "Size-proportional FedAvg analysis summary",
+    "results/baseline_16/summary_equal_weight.json": "Equal-weight FedAvg analysis summary",
+    "results/baseline_16/seed_{SEED}/{CONFIG}.json": "Per-round metrics for each seed x config (25 files)",
+    "results/baseline_16/equal_weight_seed_{SEED}/{CONFIG}.json": "Equal-weight ablation per seed (15 files)",
+    "results/baseline_16/mia/mia_summary.json": "Aggregated MIA metrics + paired CIs",
+    "results/baseline_16/mia/seed_{SEED}_{CONFIG}.json": "Per-seed MIA results (15 files)",
+    "results/temporal_split_check.json": "Small-model earlier-80%/later-20% temporal holdout sanity check",
+    "results/temporal_split_check_medium.json": "Medium-model earlier-80%/later-20% temporal holdout sanity check",
+    "results/paper_numbers.json": "Canonical numbers extracted for LaTeX tables",
+    "figures/*.pdf": "Generated figures (class distribution, paired deltas, convergence)"
+  },
+  "key_results": {
+    "small_primary_summary": "MARGINAL",
+    "small_primary_fs_mild_worst_group_wins": "5/5 seeds",
+    "small_primary_macro_f1_ci": [-0.003, 0.049],
+    "small_equal_weight_summary": "PASS",
+    "small_equal_weight_fs_mild_worst_group_wins": "4/5 seeds",
+    "small_equal_weight_macro_f1_ci": [0.019, 0.051],
+    "medium_primary_summary": "PASS",
+    "medium_primary_fs_mild_worst_group_wins": "5/5 seeds",
+    "medium_primary_macro_f1_ci": [0.090, 0.121],
+    "temporal_small_fs_mild_worst_group_wins": "2/5 seeds",
+    "temporal_small_fs_minus_dp_macro_f1_mean_delta": 0.021,
+    "temporal_small_fs_minus_dp_worst_group_mean_delta": -0.006,
+    "temporal_medium_fs_mild_worst_group_wins": "5/5 seeds",
+    "temporal_medium_fs_minus_dp_macro_f1_mean_delta": 0.111,
+    "temporal_medium_fs_minus_dp_worst_group_mean_delta": 0.166
+  }
+}

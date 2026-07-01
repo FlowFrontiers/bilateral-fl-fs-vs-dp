@@ -1,0 +1,119 @@
+{
+  "attack": "shadow_model",
+  "n_shadows": 4,
+  "shadow_ratio": 0.5,
+  "config": "dp_sgd",
+  "seed": 456,
+  "home_a": {
+    "per_class": {
+      "Collaborative": {
+        "auc": 0.510570875,
+        "tpr_at_1fpr": 0.006,
+        "tpr_at_5fpr": 0.062,
+        "advantage": 0.03199999999999997,
+        "n_samples": 2000
+      },
+      "Media": {
+        "auc": 0.488416125,
+        "tpr_at_1fpr": 0.003,
+        "tpr_at_5fpr": 0.003,
+        "advantage": 0.020000000000000018,
+        "n_samples": 2000
+      },
+      "Network": {
+        "auc": 0.5,
+        "tpr_at_1fpr": 0.0,
+        "tpr_at_5fpr": 0.0,
+        "advantage": 0.0,
+        "n_samples": 2000
+      },
+      "SocialNetwork": {
+        "auc": 0.4944095,
+        "tpr_at_1fpr": 0.012,
+        "tpr_at_5fpr": 0.0425,
+        "advantage": 0.02400000000000002,
+        "n_samples": 2000
+      },
+      "System": {
+        "auc": 0.493752375,
+        "tpr_at_1fpr": 0.0035,
+        "tpr_at_5fpr": 0.0035,
+        "advantage": 0.01200000000000001,
+        "n_samples": 2000
+      },
+      "Web": {
+        "auc": 0.49815475,
+        "tpr_at_1fpr": 0.006,
+        "tpr_at_5fpr": 0.041,
+        "advantage": 0.01200000000000001,
+        "n_samples": 2000
+      }
+    },
+    "macro": {
+      "auc": 0.49755060416666663,
+      "tpr_at_1fpr": 0.005083333333333333,
+      "tpr_at_5fpr": 0.025333333333333336,
+      "advantage": 0.016666666666666673,
+      "n_classes_evaluated": 6
+    }
+  },
+  "home_b": {
+    "per_class": {
+      "Collaborative": {
+        "auc": 0.4827455,
+        "tpr_at_1fpr": 0.009,
+        "tpr_at_5fpr": 0.041,
+        "advantage": 0.006500000000000061,
+        "n_samples": 2000
+      },
+      "Media": {
+        "auc": 0.5021420342054339,
+        "tpr_at_1fpr": 0.011705685618729096,
+        "tpr_at_5fpr": 0.05852842809364549,
+        "advantage": 0.04013377926421405,
+        "n_samples": 598
+      },
+      "Network": {
+        "auc": 0.49673049999999996,
+        "tpr_at_1fpr": 0.0135,
+        "tpr_at_5fpr": 0.0535,
+        "advantage": 0.0175,
+        "n_samples": 2000
+      },
+      "SocialNetwork": {
+        "auc": 0.5033576256023242,
+        "tpr_at_1fpr": 0.00744047619047619,
+        "tpr_at_5fpr": 0.06101190476190476,
+        "advantage": 0.03199404761904756,
+        "n_samples": 1344
+      },
+      "System": {
+        "auc": 0.4982236507120147,
+        "tpr_at_1fpr": 0.010192525481313703,
+        "tpr_at_5fpr": 0.04983012457531144,
+        "advantage": 0.016987542468856254,
+        "n_samples": 883
+      },
+      "Web": {
+        "auc": 0.4994035,
+        "tpr_at_1fpr": 0.012,
+        "tpr_at_5fpr": 0.0495,
+        "advantage": 0.017500000000000016,
+        "n_samples": 2000
+      }
+    },
+    "macro": {
+      "auc": 0.4971004684199622,
+      "tpr_at_1fpr": 0.010639781215086498,
+      "tpr_at_5fpr": 0.052228409571810276,
+      "advantage": 0.021769228225352988,
+      "n_classes_evaluated": 6
+    }
+  },
+  "equal_avg": {
+    "auc": 0.49732553629331444,
+    "tpr_at_1fpr": 0.007861557274209915,
+    "tpr_at_5fpr": 0.03878087145257181,
+    "advantage": 0.019217947446009832
+  }
+}

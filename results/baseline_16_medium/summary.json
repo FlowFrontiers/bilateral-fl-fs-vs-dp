@@ -1,0 +1,21 @@
+{
+  "decision": "PASS",
+  "n_seeds": 5,
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1024
+  ],
+  "threshold_needed": 4,
+  "condition_1_worst_group": true,
+  "fs_beats_dpsgd_worst": 5,
+  "macro_f1_ci_vs_dpsgd": {
+    "mean_diff": 0.10517919234133791,
+    "ci_low": 0.08965787079468716,
+    "ci_high": 0.12070051388798865
+  },
+  "condition_2_macro_ci": true,
+  "feddpa_included": false
+}
